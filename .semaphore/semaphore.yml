@@ -2,7 +2,7 @@ version: v1.0
 name: Sips Pipeline
 agent:
   machine:
-    type: a2-standard-4
+    type: e1-standard-2
     os_image: macos-xcode16
 blocks:
   - name: Build
