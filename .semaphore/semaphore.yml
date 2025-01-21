@@ -15,9 +15,7 @@ blocks:
             - chmod 600 ~/.ssh/id_rsa_atourcity
             - 'scp -i ~/.ssh/id_rsa_atourcity -r  $VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics .'
             - rm -rf bkgpics/jpeg
-            - run:
-                name: Run Sips
-                command: ./png.sh
+            - run: ./png.sh
             - 'scp -i ~/.ssh/id_rsa_atourcity -r bkgpics/jpeg/* $VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics_jpeg/'
       secrets:
         - name: VPS_BKG
