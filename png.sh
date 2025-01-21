@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the folder containing the image files.
-FOLDER_PATH="/Volumes/Macintosh HD/Users/jaga/Desktop/bkgpics"
+FOLDER_PATH="./bkgpics"
 
 # The rest of your script...
 
