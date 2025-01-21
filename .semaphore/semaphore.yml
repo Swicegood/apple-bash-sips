@@ -13,7 +13,7 @@ blocks:
             - checkout
             - ssh-keyscan -H $VPS_IP >> ~/.ssh/known_hosts
             - chmod 600 ~/.ssh/id_rsa_atourcity
-            - 'rsync -avz -e "ssh -i ~/.ssh/id_rsa_atourcity" --exclude 'bkgpics/jpeg/' "$VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics" .'
+            - "rsync -avz -e 'ssh -i ~/.ssh/id_rsa_atourcity' --exclude 'bkgpics/jpeg/' \"$VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics\" ."
             - rm -rf bkgpics/jpeg
             - ./png.sh
             - 'scp -i ~/.ssh/id_rsa_atourcity -r bkgpics/jpeg/* $VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics_jpeg/'
