@@ -17,6 +17,7 @@ blocks:
             - rm -rf bkgpics/jpeg
             - ./png.sh
             - 'scp -i ~/.ssh/id_rsa_atourcity -r bkgpics/jpeg/* $VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics/jpeg/'
+            - "ssh -i ~/.ssh/id_rsa_atourcity $VPS_USER@$VPS_IP './all_images.sh'"
       secrets:
         - name: VPS_BKG
 
