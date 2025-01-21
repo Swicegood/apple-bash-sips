@@ -16,7 +16,7 @@ blocks:
             - "rsync -avz -e 'ssh -i ~/.ssh/id_rsa_atourcity' --exclude 'bkgpics/jpeg/' \"$VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics\" ."
             - rm -rf bkgpics/jpeg
             - ./png.sh
-            - 'scp -i ~/.ssh/id_rsa_atourcity -r bkgpics/jpeg/* $VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics_jpeg/'
+            - 'scp -i ~/.ssh/id_rsa_atourcity -r bkgpics/jpeg/* $VPS_USER@$VPS_IP:public_html/bkgoswami.com/wp/wp-content/uploads/bkgpics/jpeg/'
       secrets:
         - name: VPS_BKG
 
